@@ -17,7 +17,7 @@ def remove_task():
 
 
 win = tk.Tk()
-photo = tk.PhotoImage(file='idk.png')
+photo = tk.PhotoImage(file='todo.png')
 win.iconphoto(False, photo)
 win.config(bg= '#C08EFA')
 win.title('To-Do App')
