@@ -6,14 +6,14 @@ def add_task(task):
         listbox_tasks.insert(tk.END, task)
         main_task.delete(0, tk.END)
     else:
-        label_2.config(text = 'Enter a task')
+        lable_2.config(text = 'Enter a task')
 
 def remove_task(task):
     try:
         index = listbox_tasks.curselection()[0]
         listbox_tasks.delete(index)
     except IndexError:
-        label_2.config(text = 'Task isn\'t selected.')
+        lable_2.config(text = 'Task isn\'t selected.')
 
 
 win = tk.Tk()
@@ -45,7 +45,6 @@ lable_2 = tk.Label(win, text = '',
                    )
 
 
-
 btn1 = tk.Button(win, text= 'Add Task',
                  width = 15,
                  command = add_task
@@ -61,11 +60,16 @@ btn2 = tk.Button(win, text = 'Remove Task',
 listbox_tasks = tk.Listbox(win, width = 50)
 
 
-main_task.pack()
+main_task.grid(row=0, column=0, padx=0, pady=0)
+
 btn1.grid(row=0, column=1, padx=5, pady=5)
+
 btn2.grid(row=2, column=0, padx=5, pady=5)
-lable_1.pack()
+
+lable_1.grid(row=0, column=0,padx=0, pady=0)
+
 lable_2.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
+
 listbox_tasks.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
 
 
