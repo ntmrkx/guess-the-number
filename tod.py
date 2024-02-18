@@ -50,25 +50,23 @@ btn1 = tk.Button(win, text= 'Add Task',
                  width = 15,
                  command = add_task
                  )
-btn1.grid(row=0, column=1, padx=5, pady=5)
 
 
 btn2 = tk.Button(win, text = 'Remove Task',
                  width = 15,
                  command = remove_task
                  )
-btn2.grid(row=2, column=0, padx=5, pady=5)
 
 
 listbox_tasks = tk.Listbox(win, width = 50)
-listbox_tasks.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
 
 
-btn1.pack()
-btn2.pack()
+main_task.pack()
+btn1.grid(row=0, column=1, padx=5, pady=5)
+btn2.grid(row=2, column=0, padx=5, pady=5)
 lable_1.pack()
 lable_2.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
-main_task.pack()
+listbox_tasks.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
 
 
 win.mainloop()
