@@ -1,6 +1,6 @@
 import tkinter as tk
 
-def add_task(task):
+def add_task():
     task = main_task.get()
     if task:
         listbox_tasks.insert(tk.END, task)
@@ -8,7 +8,7 @@ def add_task(task):
     else:
         lable_2.config(text = 'Enter a task')
 
-def remove_task(task):
+def remove_task():
     try:
         index = listbox_tasks.curselection()[0]
         listbox_tasks.delete(index)
