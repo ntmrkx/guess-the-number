@@ -64,13 +64,13 @@ main_task.grid(row=0, column=0, padx=0, pady=0)
 
 btn1.grid(row=0, column=1, padx=5, pady=5)
 
-btn2.grid(row=2, column=0, padx=5, pady=5)
+btn2.grid(row=2, column=0,columnspan = 2 padx=5, pady=5)
 
 lable_1.grid(row=0, column=0,padx=0, pady=0)
 
 lable_2.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
 
-listbox_tasks.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
+listbox_tasks.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
 
 
 win.mainloop()
