@@ -35,13 +35,13 @@ lable_1 = tk.Label(win, text='Your To-Do List',
                    fg='black',
                    font=('Arial',10,'bold'),
                    width=25,
-                   height=3,
+                   height=2,
                    anchor='n',
                    )
 
 
 lable_2 = tk.Label(win, text = '',
-                   fg='cyan'
+                   fg='cyan',
                    )
 
 
@@ -59,18 +59,17 @@ btn2 = tk.Button(win, text = 'Remove Task',
 
 listbox_tasks = tk.Listbox(win, width = 50)
 
+lable_1.pack()
 
-main_task.grid(row=0, column=0, padx=0, pady=0)
+main_task.pack()
 
-btn1.grid(row=0, column=1, padx=5, pady=5)
+btn1.pack()
 
-btn2.grid(row=2, column=0,columnspan = 2 padx=5, pady=5)
+listbox_tasks.pack()
 
-lable_1.grid(row=0, column=0,padx=0, pady=0)
+btn2.pack()
 
-lable_2.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
-
-listbox_tasks.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
+lable_2.pack()
 
 
 win.mainloop()
