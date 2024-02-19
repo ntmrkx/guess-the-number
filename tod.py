@@ -1,6 +1,5 @@
 import tkinter as tk
 
-
 def add_task():
     task = main_task.get()
     if task:
@@ -9,14 +8,12 @@ def add_task():
     else:
         lable_2.config(text='Enter a task')
 
-
 def remove_task():
     try:
         index = listbox_tasks.curselection()[0]
         listbox_tasks.delete(index)
     except IndexError:
         lable_2.config(text='Task isn\'t selected.')
-
 
 win = tk.Tk()
 photo = tk.PhotoImage(file='todo.png')
@@ -56,34 +53,12 @@ btn2 = tk.Button(win, text='Remove Task',
 
 listbox_tasks = tk.Listbox(win, width=50)
 
-lable_1.pack()
-
-main_task.pack()
-
-btn1.pack()
-
-listbox_tasks.pack()
-
-btn2.pack()
-
-lable_2.pack()
+lable_1.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
+main_task.grid(row=1, column=0, padx=10, pady=10)
+btn1.grid(row=1, column=1, padx=10, pady=10)
+listbox_tasks.grid(row=2, column=0, columnspan=2, padx=10, pady=10)
+btn2.grid(row=3, column=0, padx=10, pady=10)
+lable_2.grid(row=3, column=1, padx=10, pady=10)
 
 win.mainloop()
 
-
-listbox_tasks = tk.Listbox(win, width = 50)
-
-lable_1.pack()
-
-main_task.pack()
-
-btn1.pack()
-
-listbox_tasks.pack()
-
-btn2.pack()
-
-lable_2.pack()
-
-
-win.mainloop()
