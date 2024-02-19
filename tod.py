@@ -18,7 +18,7 @@ def remove_task():
 win = tk.Tk()
 photo = tk.PhotoImage(file='todo.png')
 win.iconphoto(False, photo)
-win.config(bg='#AFA9A9')
+win.config(bg='#C6BFBF')
 win.title('To-Do App')
 win.geometry('500x600+100+200')
 win.resizable(True, True)
@@ -28,7 +28,7 @@ win.maxsize(700, 800)
 main_task = tk.Entry(win, width=40)
 
 lable_1 = tk.Label(win, text='Your To-Do List',
-                   bg='#AFA9A9',
+                   bg='#C6BFBF',
                    fg='black',
                    font=('Arial', 10, 'bold'),
                    width=25,
@@ -38,7 +38,7 @@ lable_1 = tk.Label(win, text='Your To-Do List',
 
 lable_2 = tk.Label(win, text='',
                    fg='red',
-                   bg='#AFA9A9'
+                   bg='#C6BFBF'
                    )
 
 btn1 = tk.Button(win, text='Add Task',
